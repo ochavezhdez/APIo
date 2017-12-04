@@ -1,0 +1,17 @@
+{
+  "name": "apio",
+  "description": "Interfaz para la gestión del API APIo",
+  "main": "",
+  "authors": [
+    "Aurora Ruiz Rodriguez",
+    "Osvel Chávez Hernández"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "angular": "^1.6.7",
+    "bootstrap": "^3.3.7",
+    "components-font-awesome": "^4.7.0",
+    "angular-route": "^1.6.7"
+  }
+}

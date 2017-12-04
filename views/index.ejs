@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es" ng-app="apioApp">
+  <head>
+    <title><%= title %></title>
+    <link rel='stylesheet' href='/lib/bootstrap/dist/css/bootstrap.min.css' />
+  </head>
+  <body style="background: url('images/aigner2_webseite-1.jpg') no-repeat center center fixed;">
+    <!-- Google Maps API -->
+    <script type="text/javascript" src="/lib/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="/lib/angular/angular.js"></script>
+    <script type="text/javascript" src="/lib/angular-route/angular-route.js"></script>
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&language=en"></script>
+    <script type="text/javascript" src="/js/controllers/apioCtrl.js"></script>
+    <script type="text/javascript" src="/js/services/apioService.js"></script>
+    <script type="text/javascript" src="/js/apioApp.js"></script>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-12">
+          <h1 class="text-center"><%= title %></h1>
+          <nav class="navbar navbar-default" role="navigation">
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#!/">Inicio</a>
+            </div>
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#!/restaurant">Restaurantes</a>
+            </div>
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#!/saucer">Platillos</a>
+            </div>
+            <div class="navbar-header">
+              <a class="navbar-brand" href="#!/commentary">Comentarios</a>
+            </div>
+          </nav>
+        </div>
+      </div>
+    </div>
+    <div ng-view></div>
+  </body>
+</html>

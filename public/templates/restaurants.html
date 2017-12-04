@@ -1,0 +1,46 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<nav class="navbar navbar-default" role="navigation">
+				<div class="navbar-header">
+					<a class="navbar-brand" href="#!/restaurant/add">Adicionar restaurant</a>
+				</div>				
+				<div class="collapse navbar-collapse">
+					<form class="navbar-form navbar-right" role="search">
+						<div class="form-group">
+							<input type="text" class="form-control" placeholder="Nombre del restaurante" ng-model="name"/>
+						</div> 
+						<button ng-click="searchRestaurants()" class="btn btn-default">
+							Buscar
+						</button>
+					</form>
+				</div>				
+			</nav>
+		</div>
+	</div>
+</div>
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-4" ng-repeat="restaurant in restaurants">
+					<div class="thumbnail">
+						<div class="caption">
+							<h3>
+								{{restaurant.nombreR}}
+							</h3>
+							<label>Direcci&oacute;n</label>
+							<p>
+								{{restaurant.direccion}}
+							</p>
+							<p>
+								<a class="btn btn-primary" href="#!/restaurant/{{restaurant._id}}/details">Mostrar</a>
+								<button ng-click="deleteRestaurantById(restaurant._id)" class="btn btn-danger">Eliminar</button>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,71 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-4">
+			<div class="thumbnail">
+				<div class="caption">
+					<h2>
+						{{restaurants[0].nombreR}}
+					</h2>
+					<label>Tel&eacute;fono</label>
+					<p>
+						{{restaurants[0].telefono}}
+					</p>
+					<label>Direcci&oacute;n</label>
+					<p>
+						{{restaurants[0].direccion}}
+					</p>
+					<label>Horario</label>
+					<p>
+						{{restaurants[0].horario}}
+					</p>
+					<label>Servicio a domicilio</label>
+					<p>
+						{{restaurants[0].servicioDomicilio}}
+					</p>
+					<div>
+						<a href="#!/restaurant/{{restaurants[0]._id}}/mod" class="btn btn-warning">Modificar</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="thumbnail">
+				<div class="caption">
+					<h3>Platillos</h3>
+					<div class="container-fluid">
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row">
+									<div class="col-md-4" ng-repeat="saucer in saucers">
+										<div class="thumbnail">
+											<div class="caption">
+												<label>Nombre</label>
+												<p>
+													{{saucer.nombreP}}
+												</p>
+												<label>Precio</label>
+												<p>
+													{{saucer.precio}}
+												</p>
+												<p>
+													<a class="btn btn-primary" href="#!/saucer/{{saucer._id}}/details">Mostrar</a>
+												</p>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-4">
+			<div class="thumbnail">
+				<div class="caption">
+					<div id="map" style="height:500px; width:400px;"></div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

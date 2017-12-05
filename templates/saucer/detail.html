@@ -1,0 +1,35 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<div class="caption">
+							<h2>
+								{{saucers[0].nombreP}}
+							</h2>
+							<label>Precio</label>
+							<p>
+								{{saucers[0].precio}}
+							</p>
+							<label>Categoria</label>
+							<p>
+								{{saucers[0].categoria}}
+							</p>
+							<h3>Comentarios</h3>
+							<div ng-repeat="commentary in comments">
+								<p>{{commentary.critica}}</p>
+							</div>
+							<h3>Comente</h3>
+							<textarea ng-model="critica"></textarea>
+							<button ng-click="postCommentary(saucers[0]._id)" class="btn btn-success">Comentar</button>
+							<div>
+								<a class="btn btn-warning" href="#!/saucer/{{saucers[0]._id}}/mod">Modificar</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

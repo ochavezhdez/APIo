@@ -1,0 +1,36 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-4">
+					<div class="thumbnail">
+						<h2>Modificar un platillo</h2>
+						<div class="caption">
+							<form role="form">
+								<div class="form-group">
+									<label>Nombre</label>
+									<input type="text" ng-model="saucers[0].nombreP" placeholder="Nombre del platillo" class="form-control"/>
+								</div>
+								<div class="form-group">					 
+									<label>Precio</label>
+									<input type="number" ng-model="saucers[0].precio" placeholder="Precio del platillo" class="form-control"/>
+								</div>
+								<div class="form-group">
+									<label>Categoria</label>
+									<input type="text" ng-model="saucers[0].categoria" placeholder="Categoria del platillo" class="form-control"/>
+								</div>
+								<div class="form-group">					 
+									<label>Restaurante</label>
+									<select ng-model="saucers[0].restaurante">
+										<option ng-repeat="restaurant in restaurants" value="{{restaurant._id}}" class="form-control">{{restaurant.nombreR}}</option>
+									</select>
+								</div>
+				  				<button ng-click="putSaucer(saucers[0])" class="btn btn-success">Aceptar</button>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

@@ -1,0 +1,20 @@
+<div class="container-fluid">
+	<div class="row">
+		<div class="col-md-12">
+			<div class="row">
+				<div class="col-md-4" ng-repeat="commentary in comments">
+					<div class="thumbnail">
+						<div class="caption">
+							<p>
+								{{commentary.critica}}
+							</p>
+							<p>
+								<button ng-click="deleteCommentaryById(commentary._id)" class="btn btn-danger">Eliminar</button>
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
